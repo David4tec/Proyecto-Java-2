@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Clima</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <h1>Consulta de Clima</h1>
+    <div>
+        <label for="ciudad">Ciudad :</label>
+    </div>
+    <div>
+        <input type="text" id="ciudad" name="ciudad">
+        <button class="waves-effect waves-light btn-small" onclick="consultarClima()" id="search-btn">Consultar</button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <label for="ciudades">Ciudades:</label>
+    </div>
+    <div>
+        <input type="text" id="ciudades" value="London, Paris, Berlin">
+        <button class="waves-effect waves-light btn-small" onclick="consultarClimas()"
+            id="search-btn2">Consultar</button>
+    </div>
+    <div>
+        <button class="waves-effect waves-light btn-small" onclick="limpiarTabla()">Limpiar</button>
+    </div>
+    <br>
+    <br>
+    <div id="weather-container">
+        <table id="tabla-clima">
+            <thead>
+                <tr>
+                    <th>Ciudad</th>
+                    <th>Temperatura</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
